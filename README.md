@@ -409,7 +409,7 @@ Python Developer | Django Developer
 
 Portfolio: https://nikunjhadiya.netlify.app/
 
-LinkedIn: (https://www.linkedin.com/in/nikunjhadiya/)
+LinkedIn: https://www.linkedin.com/in/nikunjhadiya/
 
 GitHub: https://github.com/nikunjhadiya
 
