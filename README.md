@@ -16,30 +16,30 @@ This project was developed as part of my Django learning journey and focuses on 
 
 ### Task Management
 
-* Create new tasks
-* View all tasks
-* Update existing tasks
-* Delete tasks
-* Dynamic task listing from database
+- Create new tasks
+- View all tasks
+- Update existing tasks
+- Delete tasks
+- Dynamic task listing from database
 
 ### User Interface
 
-* Responsive design
-* Fixed navigation bar
-* Professional table layout
-* Modern form styling
-* Mobile-friendly structure
-* Clean user experience
+- Responsive design
+- Fixed navigation bar
+- Professional table layout
+- Modern form styling
+- Mobile-friendly structure
+- Clean user experience
 
 ### Backend Functionality
 
-* Django Models
-* Django Views
-* URL Routing
-* SQLite Database
-* Template Rendering
-* Form Processing
-* Database CRUD Operations
+- Django Models
+- Django Views
+- URL Routing
+- SQLite Database
+- Template Rendering
+- Form Processing
+- Database CRUD Operations
 
 ---
 
@@ -47,24 +47,24 @@ This project was developed as part of my Django learning journey and focuses on 
 
 ## Frontend
 
-* HTML5
-* CSS3
-* Django Templates
+- HTML5
+- CSS3
+- Django Templates
 
 ## Backend
 
-* Python
-* Django Framework
+- Python
+- Django Framework
 
 ## Database
 
-* SQLite3
+- SQLite3
 
 ## Development Tools
 
-* VS Code
-* Git
-* GitHub
+- VS Code
+- Git
+- GitHub
 
 ---
 
@@ -160,8 +160,8 @@ class TaskModel(models.Model):
 
 Users can create a task by entering:
 
-* Task Title
-* Task Description
+- Task Title
+- Task Description
 
 Data is stored in SQLite database using:
 
@@ -211,17 +211,17 @@ TaskModel.objects.get(id=pk).delete()
 
 Contains links to:
 
-* Home
-* Add Task
-* Completed
-* Trash
-* About
+- Home
+- Add Task
+- Completed
+- Trash
+- About
 
 ### Features
 
-* Fixed position
-* Responsive layout
-* Hover effects
+- Fixed position
+- Responsive layout
+- Hover effects
 
 ---
 
@@ -231,14 +231,14 @@ Displays all tasks in a table.
 
 ### Columns
 
-* Title
-* Description
-* Actions
+- Title
+- Description
+- Actions
 
 ### Actions
 
-* Update
-* Delete
+- Update
+- Delete
 
 ---
 
@@ -246,9 +246,9 @@ Displays all tasks in a table.
 
 Allows users to:
 
-* Enter task title
-* Enter task description
-* Submit task
+- Enter task title
+- Enter task description
+- Submit task
 
 ---
 
@@ -256,9 +256,9 @@ Allows users to:
 
 Allows users to:
 
-* Edit title
-* Edit description
-* Save changes
+- Edit title
+- Edit description
+- Save changes
 
 ---
 
@@ -372,30 +372,30 @@ http://127.0.0.1:8000/
 
 # Skills Demonstrated
 
-* Python Programming
-* Django Framework
-* CRUD Operations
-* MVC/MVT Architecture
-* Database Management
-* Template Inheritance
-* Frontend Development
-* Responsive Design
-* Git Version Control
-* GitHub Repository Management
+- Python Programming
+- Django Framework
+- CRUD Operations
+- MVC/MVT Architecture
+- Database Management
+- Template Inheritance
+- Frontend Development
+- Responsive Design
+- Git Version Control
+- GitHub Repository Management
 
 ---
 
 # Future Enhancements
 
-* User Authentication
-* Task Categories
-* Task Priorities
-* Search Functionality
-* Pagination
-* REST API
-* Email Notifications
-* Dark Mode
-* Dashboard Analytics
+- User Authentication
+- Task Categories
+- Task Priorities
+- Search Functionality
+- Pagination
+- REST API
+- Email Notifications
+- Dark Mode
+- Dashboard Analytics
 
 ---
 
@@ -407,9 +407,9 @@ Python Developer | Django Developer
 
 ### Connect With Me
 
-Portfolio: YOUR_PORTFOLIO_URL
+Portfolio: https://nikunjhadiya.netlify.app/
 
-LinkedIn: YOUR_LINKEDIN_URL
+LinkedIn: (https://www.linkedin.com/in/nikunjhadiya/)
 
 GitHub: https://github.com/nikunjhadiya
 
