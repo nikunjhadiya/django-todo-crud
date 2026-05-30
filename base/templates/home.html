@@ -1,0 +1,36 @@
+{% extends 'main.html' %} {% block content %}
+
+<div class="container">
+  <h1 class="heading">All Tasks</h1>
+
+  <table class="tasktable">
+    <thead>
+      <tr>
+        <th class="titlecol">Title</th>
+        <th class="desccol">Description</th>
+        <th class="actionhead">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for task in data %}
+      <tr>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+
+        <td class="actioncol">
+          <a href="{% url 'update' task.id %}" class="editbtn">Update</a>
+          <a href="{% url 'delete' task.id %}" class="deletebtn">Delete</a>
+        </td>
+      </tr>
+
+      {% empty %}
+      <tr>
+        <td colspan="4">No Tasks Available</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

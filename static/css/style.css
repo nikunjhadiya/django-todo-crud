@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #222;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+}
+
+.navlinks {
+    display: flex;
+    gap: 20px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navlinks a:hover {
+    color: orange;
+}
+
+/* Home Page */
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+    color: #222;
+}
+
+.tasktable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.tasktable th {
+    background: #222;
+    color: white;
+    padding: 18px;
+    text-align: left;
+}
+
+.tasktable td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* .tasktable tr:hover {
+    background: #f8f9fa;
+} */
+
+.tasktable tr:last-child td {
+    border-bottom: none;
+}
+
+.tasktable {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.titlecol {
+    width: 20%;
+}
+
+.desccol {
+    width: 60%;
+}
+
+.actionhead {
+    width: 20%;
+}
+
+/* Action Buttons */
+.actioncol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.editbtn {
+    text-decoration: none;
+    /* background: #4caf50; */
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    /* transition: 0.3s; */
+}
+/* 
+.editbtn:hover {
+    background: #388e3c;
+} */
+
+.deletebtn {
+    text-decoration: none;
+    /* background: #f44336; */
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    /* transition: 0.3s; */
+}
+
+/* .deletebtn:hover {
+    background: #d32f2f;
+} */
+
+/* Add Form */
+.formcontainer {
+    width: 450px;
+    margin: 60px auto;
+}
+
+.formtitle {
+    text-align: center;
+    color: #222;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.formgroup {
+    margin-bottom: 20px;
+}
+
+.formgroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.formgroup input,
+.formgroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background: white;
+}
+
+.formgroup input:focus,
+.formgroup textarea:focus {
+    outline: none;
+    border-color: #222;
+}
+
+.formgroup textarea {
+    height: 140px;
+    resize: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #388e3c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+    .formcontainer {
+        width: 90%;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .tasktable {
+        font-size: 14px;
+    }
+}

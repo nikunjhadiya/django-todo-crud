@@ -1,0 +1,23 @@
+{% extends 'main.html' %} {% block content %}
+
+<div class="formcontainer">
+  <h2 class="formtitle">Add New Task</h2>
+
+  <form method="POST" class="todoform">
+    {% csrf_token %}
+
+    <div class="formgroup">
+      <label>Title</label>
+      <input type="text" name="title" />
+    </div>
+
+    <div class="formgroup">
+      <label>Description</label>
+      <textarea name="description"></textarea>
+    </div>
+
+    <button type="submit" class="btn">Add Task</button>
+  </form>
+</div>
+
+{% endblock %}
