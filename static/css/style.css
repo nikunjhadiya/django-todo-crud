@@ -19,9 +19,23 @@ body {
     background: #222;
 }
 
-.logo h1 {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+}
+
+.logo span {
     color: white;
-    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
 }
 
 .navlinks {
@@ -33,10 +47,16 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding-bottom: 4px;
     transition: 0.3s;
 }
 
-.navlinks a:hover {
+/* .navlinks a:hover {
+    color: orange;
+} */
+
+/* Active Page */
+.navlinks a.active {
     color: orange;
 }
 
@@ -85,58 +105,84 @@ body {
 
 .tasktable {
     width: 100%;
-    table-layout: fixed;
 }
 
 .titlecol {
-    width: 20%;
+    width: 25%;
 }
 
 .desccol {
-    width: 60%;
+    width: 45%;
 }
 
 .actionhead {
-    width: 20%;
+    width: 30%;
 }
 
 /* Action Buttons */
 .actioncol {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.actioncol a {
+    margin: 0 6px;
 }
 
 .editbtn {
     text-decoration: none;
-    /* background: #4caf50; */
-    color: rgb(0, 0, 0);
+    background: #4caf50;
+    color: white;
     padding: 8px 16px;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
-    /* transition: 0.3s; */
+    display: inline-block;
+    transition: 0.3s;
 }
-/* 
+
 .editbtn:hover {
     background: #388e3c;
-} */
+    color: white;
+}
 
 .deletebtn {
     text-decoration: none;
-    /* background: #f44336; */
-    color: rgb(0, 0, 0);
+    background: #f44336;
+    color: white;
     padding: 8px 16px;
     border-radius: 6px;
     font-size: 14px;
     font-weight: 600;
-    /* transition: 0.3s; */
+    display: inline-block;
+    transition: 0.3s;
 }
 
-/* .deletebtn:hover {
+.deletebtn:hover {
     background: #d32f2f;
-} */
+    color: white;
+}
+
+.completebtn {
+    text-decoration: none;
+    background: #2196f3;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.completebtn:hover {
+    background: #1976d2;
+    color: white;
+}
+
+
 
 /* Add Form */
 .formcontainer {
@@ -200,6 +246,117 @@ body {
 .btn:hover {
     background: #388e3c;
 }
+
+/* Complete */
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.topactions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.topactions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.topbtn {
+    background: linear-gradient(135deg, #222, #444);
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.topbtn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #111, #333);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Table */
+.tasktable {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Header */
+.tasktable thead {
+    background: #28a745;
+    color: white;
+}
+
+.tasktable th {
+    padding: 15px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Table Body */
+.tasktable td {
+    padding: 7px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 15px;
+    color: #444;
+}
+
+/* Alternate Row Color */
+/* .tasktable tbody tr:nth-child(even) {
+    background: #2475c7;
+} */
+
+/* Hover Effect */
+.tasktable tbody tr:hover {
+    background: #f5f5f5;
+    transition: 0.3s;
+}
+
+/* Empty Data Row */
+.tasktable tbody tr td[colspan] {
+    text-align: center;
+    font-weight: 600;
+    color: #888;
+    padding: 25px;
+}
+
+/* Column Widths */
+.titlecol {
+    width: 30%;
+}
+
+.desccol {
+    width: 70%;
+}
+
 
 /* Responsive */
 @media (max-width: 600px) {

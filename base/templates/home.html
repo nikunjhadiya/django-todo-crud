@@ -3,6 +3,11 @@
 <div class="container">
   <h1 class="heading">All Tasks</h1>
 
+  <div class="topactions">
+    <a href="{% url 'completeall' %}" class="topbtn">✓ Complete All</a>
+    <a href="{% url 'deleteall' %}" class="topbtn">🗑 Delete All</a>
+  </div>
+
   <table class="tasktable">
     <thead>
       <tr>
@@ -21,6 +26,9 @@
         <td class="actioncol">
           <a href="{% url 'update' task.id %}" class="editbtn">Update</a>
           <a href="{% url 'delete' task.id %}" class="deletebtn">Delete</a>
+          <a href="{% url 'complete' task.id %}" class="completebtn"
+            >Complete</a
+          >
         </td>
       </tr>
 

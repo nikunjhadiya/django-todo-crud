@@ -1,3 +1,28 @@
 {% extends 'main.html' %} {% block content %}
-<p>This is the completed page.</p>
+<div class="container">
+  <h1 class="heading">Completed Tasks</h1>
+
+  <table class="tasktable">
+    <thead>
+      <tr>
+        <th class="titlecol">Title</th>
+        <th class="desccol">Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for task in data %}
+      <tr>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+      </tr>
+
+      {% empty %}
+      <tr>
+        <td colspan="4">No Completed Tasks Available</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endblock %}

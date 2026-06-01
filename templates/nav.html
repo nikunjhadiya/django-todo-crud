@@ -1,14 +1,41 @@
 {% load static %}
 <nav class="navbar">
-    <div class="logo">
-        <h1>ToDo</h1>
-    </div>
+  <div class="logo">
+    <img src="{% static 'images/taskimages.jpg' %}" alt="Task Manager Logo" />
+    <span>ToDo</span>
+  </div>
 
+  <div class="navlinks">
     <div class="navlinks">
-        <a href="{% url 'home' %}">HOME</a>
-        <a href="{% url 'add' %}">ADD</a>
-        <a href="{% url 'completed' %}">COMPLETED</a>
-        <a href="{% url 'trash' %}">TRASH</a>
-        <a href="{% url 'about' %}">ABOUT</a>
+      <a
+        href="{% url 'home' %}"
+        class="{% if request.path == '/' %}active{% endif %}"
+        >HOME</a
+      >
+
+      <a
+        href="{% url 'add' %}"
+        class="{% if request.path == '/add/' %}active{% endif %}"
+        >ADD</a
+      >
+
+      <a
+        href="{% url 'completed' %}"
+        class="{% if request.path == '/completed/' %}active{% endif %}"
+        >COMPLETED</a
+      >
+
+      <a
+        href="{% url 'trash' %}"
+        class="{% if request.path == '/trash/' %}active{% endif %}"
+        >TRASH</a
+      >
+
+      <a
+        href="{% url 'about' %}"
+        class="{% if request.path == '/about/' %}active{% endif %}"
+        >ABOUT</a
+      >
     </div>
+  </div>
 </nav>
