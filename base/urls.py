@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import *
-from base import views
 
 urlpatterns = [
     path('', home, name='home'),
@@ -13,5 +12,13 @@ urlpatterns = [
     path('complete/<int:pk>/', complete, name='complete'),
     path('completeall/', completeall, name='completeall'),
     path('deleteall/', deleteall, name='deleteall'),
+    path('crestore/<int:pk>/', crestore, name='crestore'),
+    path('cdelete/<int:pk>/', cdelete, name='cdelete'),
+    path('trestoreall/', trestoreall, name='trestoreall'),
+    path('tdeleteall/', tdeleteall, name='tdeleteall'),
+    path('trestore/<int:pk>/', trestore, name='trestore'),
+    path('tdelete/<int:pk>/', tdelete, name='tdelete'),
+    path('trashrestoreall/', trashrestoreall, name='trashrestoreall'),
+    path('trashdeleteall/', trashdeleteall, name='trashdeleteall'),
 
 ]

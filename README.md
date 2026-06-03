@@ -1,122 +1,298 @@
-# Django Todo CRUD Application
+# Task Management System
 
-A full-stack Todo Management System built using Django. This application allows users to create, view, update, and delete tasks through a clean, responsive, and user-friendly interface. The project demonstrates core Django concepts including Models, Views, URL Routing, Templates, Static Files, Database Integration, and CRUD Operations.
-
----
-
-# Project Overview
-
-The Django Todo CRUD Application is designed to help users organize and manage daily tasks efficiently. It provides a simple dashboard where users can add new tasks, view existing tasks, edit task details, and remove completed or unwanted tasks.
-
-This project was developed as part of my Django learning journey and focuses on understanding how frontend and backend components interact within the Django framework.
+A modern Task Management System built using Django that helps users organize daily tasks efficiently. The application provides complete task lifecycle management including task creation, updates, completion tracking, trash management, restoration, and permanent deletion.
 
 ---
 
-# Key Features
+## Project Overview
+
+The Task Management System is a Django-based web application designed to simplify task organization and productivity management.
+
+Users can:
+
+- Create tasks
+- Update task information
+- Mark tasks as completed
+- Move tasks to trash
+- Restore deleted tasks
+- Permanently delete tasks
+- Manage all tasks through a clean and responsive interface
+
+This project demonstrates practical implementation of Django Models, Views, Templates, URL Routing, Database Operations, and CRUD functionality.
+
+---
+
+## Features
 
 ### Task Management
 
-- Create new tasks
-- View all tasks
-- Update existing tasks
-- Delete tasks
-- Dynamic task listing from database
+- Add New Tasks
+- View All Tasks
+- Update Existing Tasks
+- Delete Tasks
+- Complete Tasks
+
+### Completed Tasks
+
+- View Completed Tasks
+- Restore Completed Tasks
+- Restore All Completed Tasks
+- Move Completed Tasks to Trash
+- Delete All Completed Tasks
+
+### Trash Management
+
+- View Deleted Tasks
+- Restore Individual Tasks
+- Restore All Tasks
+- Permanently Delete Individual Tasks
+- Permanently Delete All Tasks
 
 ### User Interface
 
-- Responsive design
-- Fixed navigation bar
-- Professional table layout
-- Modern form styling
-- Mobile-friendly structure
-- Clean user experience
-
-### Backend Functionality
-
-- Django Models
-- Django Views
-- URL Routing
-- SQLite Database
-- Template Rendering
-- Form Processing
-- Database CRUD Operations
+- Responsive Design
+- Fixed Navigation Bar
+- Professional Table Layout
+- Modern Forms
+- Mobile Friendly Design
+- About Page
+- Interactive Buttons and Hover Effects
 
 ---
 
-# Technologies Used
+## Technologies Used
 
-## Frontend
+### Frontend
 
 - HTML5
 - CSS3
 - Django Templates
 
-## Backend
+### Backend
 
 - Python
 - Django Framework
 
-## Database
+### Database
 
 - SQLite3
 
-## Development Tools
+### Development Tools
 
-- VS Code
+- Visual Studio Code
 - Git
 - GitHub
 
 ---
 
-# Project Architecture
+## Project Architecture
 
-```text
 Client Request
-      │
-      ▼
-Django URL Routing
-      │
-      ▼
-Views.py
-      │
-      ▼
-TaskModel (Database)
-      │
-      ▼
-Templates (HTML)
-      │
-      ▼
+
+↓
+
+URL Routing
+
+↓
+
+Views
+
+↓
+
+Models
+
+↓
+
+SQLite Database
+
+↓
+
+Templates
+
+↓
+
 CSS Styling
-      │
-      ▼
-Response to User
+
+↓
+
+Response
+
+---
+
+## Database Models
+
+### TaskModel
+
+Stores all active tasks.
+
+```python
+class TaskModel(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+```
+
+### CompleteModel
+
+Stores completed tasks.
+
+```python
+class CompleteModel(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+```
+
+### TrashModel
+
+Stores deleted tasks.
+
+```python
+class TrashModel(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
 ```
 
 ---
 
-# Project Structure
+## Application Workflow
+
+### Active Task Flow
+
+Task Created
+
+↓
+
+Home Page
+
+↓
+
+Update / Complete / Delete
+
+---
+
+### Completed Task Flow
+
+Complete Task
+
+↓
+
+Completed Section
+
+↓
+
+Restore
+
+or
+
+↓
+
+Move to Trash
+
+---
+
+### Trash Task Flow
+
+Delete Task
+
+↓
+
+Trash Section
+
+↓
+
+Restore
+
+or
+
+↓
+
+Permanent Delete
+
+---
+
+## Pages Included
+
+### Home Page
+
+Displays all active tasks.
+
+Features:
+
+- Update Task
+- Delete Task
+- Complete Task
+- Complete All Tasks
+- Delete All Tasks
+
+### Add Task Page
+
+Allows users to create new tasks.
+
+Features:
+
+- Title Input
+- Description Input
+- Form Validation
+- Save Task
+
+### Update Task Page
+
+Allows users to modify existing tasks.
+
+Features:
+
+- Edit Title
+- Edit Description
+- Save Changes
+
+### Completed Tasks Page
+
+Displays completed tasks.
+
+Features:
+
+- Restore Task
+- Delete Task
+- Restore All
+- Delete All
+
+### Trash Page
+
+Displays deleted tasks.
+
+Features:
+
+- Restore Task
+- Permanently Delete Task
+- Restore All
+- Permanently Delete All
+
+### About Page
+
+Provides project details and technology information.
+
+---
+
+## Project Structure
 
 ```text
-myproject/
+django-todo-crud/
 │
 ├── base/
-│   │
 │   ├── migrations/
-│   │
-│   ├── templates/
-│   │   ├── main.html
-│   │   ├── nav.html
-│   │   ├── home.html
-│   │   ├── add.html
-│   │   ├── update.html
-│   │   ├── completed.html
-│   │   ├── trash.html
-│   │   └── about.html
-│   │
 │   ├── models.py
 │   ├── views.py
 │   ├── urls.py
 │   └── admin.py
+│
+├── templates/
+│   ├── main.html
+│   ├── nav.html
+│   ├── home.html
+│   ├── add.html
+│   ├── update.html
+│   ├── completed.html
+│   ├── trash.html
+│   └── about.html
 │
 ├── static/
 │   └── css/
@@ -134,235 +310,52 @@ myproject/
 
 ---
 
-# Database Design
+## Installation
 
-## Task Model
-
-```python
-class TaskModel(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-```
-
-### Fields
-
-| Field       | Type      | Description      |
-| ----------- | --------- | ---------------- |
-| id          | AutoField | Primary Key      |
-| title       | CharField | Task Title       |
-| description | TextField | Task Description |
-
----
-
-# CRUD Operations
-
-## Create Task
-
-Users can create a task by entering:
-
-- Task Title
-- Task Description
-
-Data is stored in SQLite database using:
-
-```python
-TaskModel.objects.create()
-```
-
----
-
-## Read Tasks
-
-All tasks are retrieved using:
-
-```python
-TaskModel.objects.all()
-```
-
-and displayed inside a responsive table.
-
----
-
-## Update Task
-
-Existing tasks can be modified using:
-
-```python
-TaskModel.objects.get(id=pk)
-```
-
-and updated through a form.
-
----
-
-## Delete Task
-
-Tasks can be removed using:
-
-```python
-TaskModel.objects.get(id=pk).delete()
-```
-
----
-
-# Frontend Components
-
-## Navigation Bar
-
-Contains links to:
-
-- Home
-- Add Task
-- Completed
-- Trash
-- About
-
-### Features
-
-- Fixed position
-- Responsive layout
-- Hover effects
-
----
-
-## Home Page
-
-Displays all tasks in a table.
-
-### Columns
-
-- Title
-- Description
-- Actions
-
-### Actions
-
-- Update
-- Delete
-
----
-
-## Add Task Page
-
-Allows users to:
-
-- Enter task title
-- Enter task description
-- Submit task
-
----
-
-## Update Task Page
-
-Allows users to:
-
-- Edit title
-- Edit description
-- Save changes
-
----
-
-# Backend Workflow
-
-### Add Task Flow
-
-```text
-User Form
-    │
-    ▼
-POST Request
-    │
-    ▼
-views.py
-    │
-    ▼
-TaskModel.objects.create()
-    │
-    ▼
-Database
-```
-
-### Update Task Flow
-
-```text
-User Clicks Update
-    │
-    ▼
-Fetch Task By ID
-    │
-    ▼
-Update Values
-    │
-    ▼
-Save()
-    │
-    ▼
-Redirect Home
-```
-
-### Delete Task Flow
-
-```text
-User Clicks Delete
-    │
-    ▼
-Fetch Task By ID
-    │
-    ▼
-Delete()
-    │
-    ▼
-Redirect Home
-```
-
----
-
-# Installation
-
-## Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/nikunjhadiya/django-todo-crud.git
 ```
 
-## Navigate to Project
+### Move Into Project
 
 ```bash
 cd django-todo-crud
 ```
 
-## Create Virtual Environment
+### Create Virtual Environment
 
 ```bash
 python -m venv myenv
 ```
 
-## Activate Environment
+### Activate Environment
 
 ```bash
 myenv\Scripts\activate
 ```
 
-## Install Django
+### Install Django
 
 ```bash
 pip install django
 ```
 
-## Apply Migrations
+### Apply Migrations
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-## Run Server
+### Run Server
 
 ```bash
 python manage.py runserver
 ```
 
-Visit:
+Open:
 
 ```text
 http://127.0.0.1:8000/
@@ -370,49 +363,50 @@ http://127.0.0.1:8000/
 
 ---
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 - Python Programming
 - Django Framework
 - CRUD Operations
-- MVC/MVT Architecture
 - Database Management
+- SQLite
+- MVT Architecture
 - Template Inheritance
-- Frontend Development
-- Responsive Design
+- Responsive Web Design
 - Git Version Control
-- GitHub Repository Management
+- GitHub Collaboration
 
 ---
 
-# Future Enhancements
+## Future Enhancements
 
 - User Authentication
+- Search Tasks
 - Task Categories
 - Task Priorities
-- Search Functionality
-- Pagination
-- REST API
-- Email Notifications
-- Dark Mode
+- Due Dates
+- REST API Integration
 - Dashboard Analytics
+- Dark Mode
+- Email Notifications
 
 ---
 
-# Author
+## Author
 
-**Nikunj Hadiya**
+Nikunj Hadiya
 
 Python Developer | Django Developer
 
-### Connect With Me
+Portfolio:
+https://nikunjhadiya.netlify.app/
 
-Portfolio: https://nikunjhadiya.netlify.app/
+LinkedIn:
+https://www.linkedin.com/in/nikunjhadiya/
 
-LinkedIn: https://www.linkedin.com/in/nikunjhadiya/
-
-GitHub: https://github.com/nikunjhadiya
+GitHub:
+https://github.com/nikunjhadiya
 
 ---
 
-⭐ If you like this project, consider giving it a star on GitHub.
+⭐ If you found this project useful, consider giving it a star on GitHub.
