@@ -22,6 +22,30 @@ This project demonstrates practical implementation of Django Models, Views, Temp
 
 ---
 
+## Application Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
+### Add Task Page
+
+![Add Task](screenshots/addtask.png)
+
+### Completed Tasks Page
+
+![Completed Tasks](screenshots/Completedtasks.png)
+
+### Trash Page
+
+![Trash Page](screenshots/trash.png)
+
+### About Page
+
+![About Page](screenshots/about.png)
+
+---
+
 ## Features
 
 ### Task Management
